@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salgadinhos Delícia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <i data-lucide="chef-hat" class="icon-chef"></i>
+            <h1>Salgadinhos Delícia</h1>
+            <p>Os melhores salgadinhos para sua festa</p>
+            <button onclick="handleWhatsAppClick()" class="cta-button">
+                Fazer Pedido via WhatsApp
+            </button>
+        </div>
+    </header>
+
+    <section class="products">
+        <h2>Nossos Salgadinhos</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg_Axlp4WYjflVASBVGBbmaD7JszsA7_r7vQ&s" alt="Coxinha">
+                <div class="product-info">
+                    <h3>Coxinha</h3>
+                    <p>Deliciosa massa de batata recheada com frango desfiado temperado</p>
+                    <p class="price">R$ 25,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://s3-sa-east-1.amazonaws.com/loja2/1f79e3c86586e73d75fd72a6f82e2dc1.jpg" alt="Pastel">
+                <div class="product-info">
+                    <h3>Pastel</h3>
+                    <p>Massa crocante com recheios variados: carne, queijo, frango</p>
+                    <p class="price">R$ 25,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ytimg.com/vi/ueUNleE3JH0/maxresdefault.jpg" alt="Corneto">
+                <div class="product-info">
+                    <h3>Corneto</h3>
+                    <p>Tradicional quitute árabe-brasileiro de carne moída e trigo</p>
+                    <p class="price">R$ 23,00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Entre em Contato</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="example-notice">
+                    <i data-lucide="alert-circle"></i>
+                    <span>Dados Fictícios (Exemplo)</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="phone"></i>
+                    <span>(Exemplo) (11) 99999-9999</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>(Exemplo) Rua dos Salgados, 123 - São Paulo</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="clock"></i>
+                    <span>(Exemplo) Seg - Sáb: 9h às 18h</span>
+                </div>
+                <div class="info-item">
+                    <i data-lucide="instagram"></i>
+                    <span>(Exemplo) @salgadinhosdelicia</span>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Salgadinhos Delícia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // WhatsApp click handler
+        function handleWhatsAppClick() {
+            const message = encodeURIComponent("Olá! Gostaria de fazer um pedido dos melhores salgadinhos da cidade! 😋🎉");
+            window.open(`https://api.whatsapp.com/send?phone=5511999999999&text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
